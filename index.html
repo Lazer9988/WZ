@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery.js"></script>
+<script>
+$(function(){  
+
+	/*导航*/
+	
+	$(".top h1 a").hover(function(){
+	$(this).addClass("a_now")
+	
+	},function(){
+	$(this).removeClass("a_now")
+		})
+		
+
+     /*Banner*/
+	
+	$(".background div").hide();
+	$(".background div:first").show();
+	
+	var n=0
+	function run(){
+		
+		if(n>1){
+			$(".background div:first").css({zIndex:1});
+			n=0}else{
+			$(".background div:first").css({zIndex:10});
+				n=n+1};
+				
+		$(".background div").eq(n).show();
+		$(".background div").eq(n).siblings().fadeOut()
+		}
+
+		
+   var aaa=setInterval(run,3000);
+	
+	$(".background").hover(function(){
+		clearInterval(aaa)
+		},function(){
+		aaa=setInterval(run,3000);
+			})
+			
+	})
+
+</script>
+<style>
+/*重置*/
+body{margin:0}
+a{text-decoration:none}
+p,h1,h2,ul,li{margin:0;padding:0;list-style:none}
+img{display:block;margin:0;border:none}
+*{color:#333;font-family:"微软雅黑"; font-weight:normal}
+/*顶部*/
+.top_box{width:1920px;
+		height:165px;
+		margin:auto;
+		overflow:hidden;}
+.top{width:1092px;  
+    height:90px;
+	margin:auto;
+	margin-top:62px;
+	overflow:hidden;
+	}
+.LOGO{width:160px;
+	height:58px;
+      float:left;}
+.p1{width:162px;
+    height:14px;
+    margin-top:67px;
+	margin-left:-160px;
+	float:left; }
+.top h1{width:848px;
+    height:18px;
+    margin-top:54px;
+    margin-left:75px;
+	font-size:17px;
+	text-decoration:none;
+	float:left;
+	overflow:hidden;}
+.top h1 a,p{margin-right:16px; 
+			float:left;
+			line-height:18px;}
+.top .contactus{margin:0px;}
+.zi{width:225px;
+     height:16px;
+	margin-left:854px;
+	margin-top:-78px;
+	float:left;
+	}
+.a_now{ background-color:#F5F5F5;color:#93820E}
+/*Banner*/
+.container{width:1920px;
+		height::607px;
+		margin:auto;
+		position:relative;}
+.background{position:absolute;
+		left:0;
+		top:0px;
+		width:1920px;
+		height:607px;
+		overflow:hidden;}	
+.background .bg_img{background-image:url(imges/banner1.jpg);
+					height:607px;width:1920px;
+					background-repeat:no-repeat;
+					background-position:center;
+					background-size:cover;
+					position:absolute;z-index:10}
+.background .bg_img01{background-image:url(imges/banner2.jpg);
+					height:607px;width:1920px;
+					background-repeat:no-repeat;
+					background-position:center;
+					background-size:cover;
+					position:absolute;z-index:9}
+.background .bg_img02{background-image:url(imges/banner3.png);
+					height:608px;width:1920px;
+					background-repeat:no-repeat;
+					background-position:center;
+					background-size:cover;
+					position:absolute;z-index:8}
+/*子导航*/
+.subnav{width:1920px;
+		height:79px;
+		margin:auto;
+		margin-top:607px;
+		overflow:hidden;
+		background-color:#f7f6f2;}
+.subnav_box{width:982px;
+		height:36px;
+		margin:auto;
+		margin-top:21px;
+		}	
+.hezi{width:601px;
+	  height:16px;
+	  float:left;
+	
+	  margin-top:9px;
+	  }	
+.hezi li,p{margin-right:16px;float:left;
+			line-height:15px;
+			color:#969696;}	
+.subnav_box input{width:283px;
+				height:35px;
+				font-weight:normal;
+				margin-left:75px;
+				float:left;
+				text-indent:12px;
+				color:#afb2b2;
+				background-image:url(imges/sousuo.png);
+				background-repeat:no-repeat;
+				background-position:right;
+				border:#d6d5d1 1px solid} 
+/*服务*/		
+.service{ width:1920px;
+		height:872px;
+		overflow:hidden;
+		margin:auto;}
+.cho{width:312px;
+	height:77px;
+	margin:auto;
+	margin-top:30px;}
+.service_box{width:1026px;
+			height:632px;
+			margin:auto;
+			margin-top:20px;
+			overflow:hidden;
+			}	
+.service_box a{ float:left;}
+.xinxi1{width:234px;
+		height:51px;
+		float:left;
+		margin-top:-300px;
+		margin-left:50px;
+		background-image:url(imges/xinxi1.png);
+		background-repeat:no-repeat;
+		background-position:center;}
+.xinxi2{width:234px;
+		height:51px;
+		float:left;
+		margin-top:-300px;
+		margin-left:405px;
+		background-image:url(imges/xinxi2.png);
+		background-repeat:no-repeat;
+		background-position:center;}
+.xinxi3{width:234px;
+		height:51px;
+		float:left;
+		margin-top:-300px;
+		margin-left:766px;
+		background-image:url(imges/xinxi3.png);
+		background-repeat:no-repeat;
+		background-position:center;}
+.xinxi4{width:234px;
+		height:51px;
+		float:left;
+		margin-top:26px;
+		margin-left:50px;
+		background-image:url(imges/xinxi4.png);
+		background-repeat:no-repeat;
+		background-position:center;}
+.xinxi5{width:234px;
+		height:51px;
+		float:left;
+		margin-top:26px;
+		margin-left:134px;
+		background-image:url(imges/xinxi5.png);
+		background-repeat:no-repeat;
+		background-position:center;}
+.xinxi6{width:234px;
+		height:51px;
+		float:left;
+		margin-top:26px;
+		margin-left:134px;
+		background-image:url(imges/xinxi6.png);
+		background-repeat:no-repeat;
+		background-position:center;}
+/*上栏*/
+.topcontainer{width:1920px;
+			height:230px;
+			margin:auto;}
+.bjing{width:1920px;
+		height:230px;
+		margin:auto;
+		background-image:url(imges/bjing.png);
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:cover;}
+.topcontainer_box{width:860px;
+			height:230px;
+			margin:auto;}
+.shafa{width:468px;
+		height:307px;
+		margin-top:-78px;
+		float:left;
+		background-image:url(imges/shafa.png);
+		background-repeat:no-repeat;}	
+.topcontainer_box img{width:235px;
+					height:74px;
+					float:left;
+					margin-top:-147px;
+					margin-left:628px;}	
+/*白*/	
+.bai{width:1920px;
+	height:24px;
+	margin:auto;}
+/*吸顶灯*/
+.bjs{width:1920px;
+	height:548px;
+	margin:auto;
+	overflow:hidden;
+	background-color:#f7f6f2;
+	}
+.bjs_box{width:1028px;
+		 height:366px;
+		 margin:auto;
+		 margin-top:54px;
+		 overflow:hidden;}
+.bjs_box img{float:left;
+			margin:auto;
+			margin-top:65px;}	
+.bz{width:307px;
+    height:30px;
+	margin:auto;
+	background-image:url(imges/ree.png);
+	background-repeat:no-repeat;}		
+.btn_Box{width:672px;
+         height:46px;
+	     margin:auto;
+		 margin-top:40px;}	
+.btn_Box li{width:224px;
+			height:46px;
+			float:left;
+			cursor:pointer;
+			background-repeat:no-repeat}
+.btn_Box00{background-image:url(imges/K1.png)}
+.btn_Box01{background-image:url(imges/K2.png)}
+.btn_Box02{background-image:url(imges/K3.png)}
+
+.btn0{background-image:url(imges/KL1.png)}
+.btn1{background-image:url(imges/KL2.png)}
+.btn2{background-image:url(imges/KL3.png)}
+.dz{width:1025px;
+    height:20px;
+	margin:auto;
+	margin-top:50px;}
+.dz p{float:left;
+	line-height:20px;}
+/*下Banner*/
+.X_bj{ width:1920px;
+		height:556px;
+		margin:auto;
+		overflow:hidden;}
+.sidebar_Box{width:1920px;
+			height:546px;
+			margin:auto;
+			margin-top:10px;
+			position:relative;}
+.Ba_BOX{width:1032px;
+		height:45px;
+		margin:auto;}	
+.Ba_BOX li{width:258px;
+			height:45px;
+			float:left;
+			background-repeat:no-repeat;
+			cursor:pointer;}
+.tiao{width:292px;
+	  height:10px;
+	  margin:auto;
+	  background-image:url(imges/tiao.png);
+	  position:absolute;
+	  top:487px;
+	  left:815px;
+	 }
+.atn_Box00{background-image:url(../../../%E4%B8%AA%E4%BA%BA%E7%AE%80li/3.11/%E4%BB%A3%E7%A0%81%E7%BD%91%E9%A1%B5/imges/liL1.png)}
+.atn_Box01{background-image:url(imges/li2.png)}
+.atn_Box02{background-image:url(imges/li3.png)}
+.atn_Box03{background-image:url(imges/li4.png)}	
+/*中栏*/
+.ZL_bj{width:1920px;
+	height:312px;
+	margin:auto;
+	overflow:hidden;
+	background-color:#f2ede7;}
+.zhz_box{width:930px;
+	    height:130px;
+		margin:auto;
+		margin-top:96px;}
+.bjwz{width:722px;
+	   height:104px;
+	   margin-left:36px;
+	   margin-top:16px;
+	   background-image:url(imges/11d.png);
+	   background-repeat:no-repeat;
+	   cursor:pointer;}
+.zhz_box .bjwz{float:left}
+/*下栏*/
+.Xlm{width:1920px;
+	height:395px;
+	margin:auto;
+	overflow:hidden;}
+.yu{width:1026px;
+	height:274px;
+	margin-left:446px;
+	margin-top:20px;
+	overflow:hidden;}
+.xlogo{width:287px;
+	height:28px;
+	margin-left:780px;
+	margin-top:20px;
+	background-image:url(imges/dde.png);
+	background-repeat:no-repeat;}
+.yu img{float:left;}
+/*下导航*/
+.bottom_nav{width:1920px;
+	height:200px;
+	margin:auto;
+	overflow:hidden;
+	background-image:url(imges/botton_nav.png);}
+.swss{width:950px;
+	height:130px;
+	margin:auto;
+	margin-top:43px;
+	overflow:hidden;}
+.swss img{float:left;}
+/*关于豪迈*/
+.guanyu{width:1920px;
+	height:655px;
+	margin:auto;
+	background-color:#f7f6f2;
+	overflow:hidden;}
+.ztp_box{width:1026px;
+	height:657px;
+	margin:auto;
+	overflow:hidden;}
+.g1{width:762px;
+	height:262px; 
+	float:left;
+	cursor:pointer;
+	background-image:url(imges/g1.png)}
+.g2{width:768px;
+	height:376px;
+	float:left;
+	margin-top:17px;
+	cursor:pointer;
+    background-image:url(imges/g2.png)}
+.g3{width:250px;
+	height:263px;
+	float:left;
+	margin-top:-263px;
+	cursor:pointer;
+	background-image:url(imges/g3.png)}
+.g4{width:250px;
+	height:375px;
+	float:left;
+	margin-top:17px;
+	margin-left:8px;
+	cursor:pointer;
+	background-image:url(imges/g4.png)}
+/*联系豪迈*/
+.lxhm{width:1920px;
+	height:473px;
+	margin:auto;
+	background-color:#9c7652;
+	overflow:hidden;}
+.zdip_box{width:1000px;
+	height:282px;
+	margin-left:446px;
+	margin-top:160px;
+	overflow:hidden;}
+.gd1{width:294px;
+	height:282px; 
+	float:left;
+	cursor:pointer;
+	background-image:url(imges/di1.png)}
+.gd2{width:362px;
+	height:284px;
+	float:left;
+	cursor:pointer;
+    background-image:url(imges/di2.png)}
+.gd3{width:340px;
+	height:218px;
+	float:left;
+	cursor:pointer;
+	background-image:url(imges/di3.png)}
+	
+</style>
+
+</head>
+<body>
+<!--顶部-->
+<div class="top_box">
+   <div class="top">
+   <a href=""><img class="LOGO" src="imges/LOGO.png"></a>
+   <div class="p1"><img src="imges/zi.png"></div>  
+       <h1>
+          <a href="" style="margin-right:28px;color:#93820E;">豪迈首页</a>
+          <a href="">LED吸顶灯</a>
+          <p>|</p>
+          <a href="">产业中心</a>
+          <p>|</p>
+          <a href="">家居照明解决方案</a>
+          <p>|</p>
+          <a href="">招商加盟</a> 
+          <p>|</p> 
+          <a href="">OEM</a> 
+          <p>|</p> 
+          <a href="">关于豪迈</a>
+          <p>|</p>  
+          <a class="contactus" href="">联系豪迈</a>  
+       </h1>
+   <a href=""><img class="zi" src="imges/iz.png"></a> 
+    </div> 
+</div>
+
+<!--Banner-->
+<div class="container">
+    <div class="background">
+      <div class="bg_img"><img style="position:absolute;
+      		left:637px;top:205px" src="imges/biaotu.png"></div>
+      <div class="bg_img01"><img style="position:absolute;
+      		left:937px;top:205px" src="imges/biaotu.png"></div>
+      <div class="bg_img02"><img style="position:absolute;
+      		left:860px;top:205px" src="imges/biaotu.png"></div>
+    </div>
+</div>
+
+<!--子导航-->
+<div class="subnav">
+     <div class="subnav_box">
+       <ul class="hezi">
+          <li style="margin-right:14px;margin-top:-3px;"><img src="imges/zi2.png"></li>
+          <li>吸顶灯</li>
+          <p>|</p>
+          <li>LED吸顶灯</li>
+          <p>|</p>
+          <li>家居照明</li>
+          <p>|</p>
+          <li>卧室吸顶灯</li>
+          <p>|</p>
+          <li style="margin:0px">LED生产厂家</li>      
+      </ul>
+      <input value="请输入关键词搜索">
+   </div>
+      
+ </div>
+ 
+ <!--服务-->
+<div class="service">
+ <img class="cho" src="imges/dwwd.png">
+     <div class="service_box">
+       <a href=""><img src="imges/tu1.png"></a>
+       <a style="margin-left:40px" href=""><img src="imges/tu2.png"></a>
+       <a style="margin-left:44px" href=""><img src="imges/tu3.png"></a>
+       <a style="margin-top:93px;" href=""><img src="imges/tu4.png"></a>
+       <a style="margin-top:93px;margin-left:40px;" href=""><img src="imges/tu5.png"></a>
+       <a style="margin-top:93px;margin-left:44px;" href=""><img src="imges/tu6.png"></a>
+       <div class="xinxi1"></div>
+       <div class="xinxi2"></div>
+       <div class="xinxi3"></div>
+       <div class="xinxi4"></div>
+       <div class="xinxi5"></div>
+       <div class="xinxi6"></div>
+    </div> 
+</div>
+
+<!--上栏-->
+<div class="topcontainer">
+<div class="bjing">
+   <div class="topcontainer_box">
+   <div class="shafa"></div>
+   <img src="imges/wfwef.png">
+   </div>
+</div>
+</div>
+
+<!--白-->
+<div class="bai"></div>
+
+<!--吸顶灯-->
+<div class="bjs">
+  <div class="bjs_box">
+      <div class="bz"></div>
+      <ul class="btn_Box">
+      <li class="btn0"></li>
+      <li class="btn_Box01"></li>
+      <li class="btn_Box02"></li>
+      </ul>
+      <img src="imges/deng1.png">
+      <img style="margin-left:55px" src="imges/deng2.png">
+      <img style="margin-left:55px" src="imges/deng3.png">
+  </div>
+  <div class="dz">
+  <p style="margin-left:103px;">功能性吸顶灯</p>
+  <p style="margin-left:246px;">功能性吸顶灯</p>
+  <p style="margin-left:246px;">功能性吸顶灯</p>
+  </div>
+</div>
+
+<!--下Banner-->
+<div class="X_bj">
+<div class="sidebar_Box">
+    <ul class="Ba_BOX">
+    <li class="atn_Box00"></li>
+    <li class="atn_Box01"></li>
+    <li class="atn_Box02"></li>
+    <li class="atn_Box03"></li>
+   </ul> 
+   <div class="tiao"></div>
+   <img src="imges/Xbanner.png">
+</div>
+</div>
+
+<!--中栏-->
+<div class="ZL_bj">
+    <div class="zhz_box">
+      <img style="float:left" src="imges/zhaom.png">
+      <div class="bjwz"></div>
+    </div>
+</div> 
+
+<!--下栏-->
+<div class="Xlm">
+   <div class="xlogo"></div>
+   <div class="yu">
+   <img src="imges/ede.png">
+   <img src="imges/sqsq.png">
+   </div>
+
+
+
+</div>
+
+<!--下导航-->
+<div class="bottom_nav">
+   <div class="swss">
+   <img style="margin-top:22px" src="imges/dwaq.png">
+   <img style="margin-left:64px" src="imges/deng9.png">
+   <img style="margin-left:89px; margin-top:30px;" src="imges/fuwurexian.png">
+   </div>
+</div>
+
+<!--关于豪迈-->
+<div class="guanyu">
+    <div class="ztp_box">
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3"></div>
+    <div class="g4"></div>
+    </div>
+</div>
+
+<!--联系豪迈-->
+<div class="lxhm">
+    <div class="zdip_box">
+    <div class="gd1"></div>
+    <div class="gd2"></div>
+    <div class="gd3"></div>
+    </div>
+</div>
+
+</body>
+</html>
